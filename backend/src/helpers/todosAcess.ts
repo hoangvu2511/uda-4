@@ -86,7 +86,7 @@ export class TodosAccess {
         userId,
         todoId
       }
-    })
+    }).promise()
   }
 
   async updateAttachmentUrl(userId: string, todoId: string, newUrl: string) {
@@ -104,7 +104,7 @@ export class TodosAccess {
       ExpressionAttributeValues: {
         ':attachmentUrl': newUrl
       }
-    })
+    }).promise()
   }
 }
 
